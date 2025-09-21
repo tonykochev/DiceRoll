@@ -1,12 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Hello World Azure Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yahtzee Dice Roller</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<h1>Azure Static Website Template</h1>
-<p>This page is a sample page for a “Hello World” Azure Static Website Template. The page contains an HTML validation warning. 
-Can you find and fix that warning? What about the curly quotes? Do they current work in all browsers? Can you fix the curly 
-quotes also? And what about proper indenting?</p>
+  <div class="game-container">
+    <h1>Yahtzee Dice Roller</h1>
+    
+    <p class="instructions">
+      This app rolls 5 dice for Yahtzee.  
+      Click the <strong>Roll Dice</strong> button (or press <strong>Enter</strong>) to roll all dice.  
+      Use the results to play your Yahtzee game with friends!
+    </p>
+
+    <table class="dice-table">
+      <thead>
+        <tr>
+          <th>Die 1</th>
+          <th>Die 2</th>
+          <th>Die 3</th>
+          <th>Die 4</th>
+          <th>Die 5</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="text" id="die1" class="die-field" readonly></td>
+          <td><input type="text" id="die2" class="die-field" readonly></td>
+          <td><input type="text" id="die3" class="die-field" readonly></td>
+          <td><input type="text" id="die4" class="die-field" readonly></td>
+          <td><input type="text" id="die5" class="die-field" readonly></td>
+          <td><input type="text" id="total" class="die-field" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button id="roll-btn" autofocus>Roll Dice</button>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
