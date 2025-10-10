@@ -5,7 +5,7 @@ const API_BASE = "https://node-js-on-azure-tak-grasewdcfyatatb9.canadacentral-01
 // ======== WAKE SERVER FUNCTION ========
 async function wakeServer() {
   try {
-    const res = await fetch(`${API_BASE}/health`);
+    const res = await fetch(`${API_BASE}/api/health`);
     if (res.ok) {
       const data = await res.json();
       console.log("✅ Server awake:", data);
@@ -21,7 +21,7 @@ async function wakeServer() {
 async function rollDice() {
   try {
     // Call the Node.js API for a Yahtzee roll (5 dice)
-    const response = await fetch(`${API_BASE}/yahtzee-roll`);
+    const response = await fetch(`${API_BASE}/api/yahtzee-roll`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
     const data = await response.json();
